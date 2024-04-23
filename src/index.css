@@ -211,10 +211,8 @@ span {
     }
     .css-15edxu6-MuiTypography-root {
       width: 100%;
-      padding: 2rem;
-      span {
-        width: 20px !important;
-      }
+      padding: 10px;
+      margin-top: 1rem;
     }
   }
 

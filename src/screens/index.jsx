@@ -17,6 +17,7 @@ const Home = ({ setSelected }) => {
     <Box>
       {/* Header */}
       <Box
+        className="Header"
         display={"flex"}
         justifyContent={"space-around"}
         alignItems={"center"}
