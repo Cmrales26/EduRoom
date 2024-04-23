@@ -85,9 +85,10 @@ const Home = ({ setSelected }) => {
         </Box>
 
         <Box className="Courses">
-          {courses.slice(0, 3).map((courses, idx) => (
+          {courses.slice(0, 3).map((courses) => (
             <CourseCards
-              key={idx}
+              key={courses.id}
+              id={courses.id}
               img={courses.img}
               title={courses.titulo}
               author={courses.autor}
@@ -112,17 +113,15 @@ const Home = ({ setSelected }) => {
               alignItems={"center"}
               color={"#8e96f4"}
               gap={1}
-            >
-              <Link to={"/categories"} style={{ textDecoration: "none" }}>
-                <Typography variant="p">Ver todos</Typography>
-              </Link>
-              <ArrowForwardIcon />
-            </Box>
+            ></Box>
           </Box>
-          <Box display={"flex"} justifyContent={"space-between"}>
+          <Box display={"flex"} justifyContent={"space-between"} gap={2}>
             {categories.slice(0, 4).map((category, idx) => (
-              <Link
-                to={"/category"}
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                gap={2}
+                key={idx}
                 style={{
                   backgroundColor: "#fff",
                   padding: "1.5rem 3rem",
@@ -131,10 +130,11 @@ const Home = ({ setSelected }) => {
                   textDecoration: "none",
                   color: "inherit",
                 }}
-                key={idx}
               >
-                {category}
-              </Link>
+                <img src={category.image} width={50}></img>
+
+                {category.cat}
+              </Box>
             ))}
           </Box>
         </Box>

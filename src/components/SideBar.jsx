@@ -21,7 +21,7 @@ const Item = ({ title, to, icon, selected }) => {
         display={"flex"}
         alignItems={"center"}
         gap={"10px"}
-        padding={"1rem 2rem"}
+        padding={".5rem 2rem"}
         margin={"1rem"}
         color={"gray"}
         borderRadius={"20px"}
@@ -30,7 +30,10 @@ const Item = ({ title, to, icon, selected }) => {
         }}
       >
         <Box color={{ color: title === selected ? "white" : "" }}>{icon}</Box>
-        <Typography color={{ color: title === selected ? "white" : "" }}>
+        <Typography
+          variant="caption"
+          color={{ color: title === selected ? "white" : "" }}
+        >
           {title}
         </Typography>
       </Box>
@@ -39,16 +42,16 @@ const Item = ({ title, to, icon, selected }) => {
 };
 
 const SideBar = ({ selected }) => {
-  console.log(selected);
   return (
     <Box
       sx={{
-        width: 300,
+        // width: 300,
         height: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
       }}
+      className="Sidebar"
     >
       {/* LOGO */}
       <figure style={{ padding: "2rem" }}>
@@ -58,7 +61,11 @@ const SideBar = ({ selected }) => {
         <Box>
           <Typography variant={"caption"}>
             by{" "}
-            <a href="https://github.com/Cmrales26" target="_blank">
+            <a
+              href="https://github.com/Cmrales26"
+              target="_blank"
+              style={{ color: "black" }}
+            >
               @Cmrales26
             </a>
           </Typography>
@@ -81,8 +88,8 @@ const SideBar = ({ selected }) => {
           selected={selected}
         ></Item>
         <Item
-          title={"Mis Cursos"}
-          to={"/courses"}
+          title={"Favoritos"}
+          to={"/favorites"}
           icon={<FavoriteIcon />}
           selected={selected}
         ></Item>

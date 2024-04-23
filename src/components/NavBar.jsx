@@ -10,7 +10,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import CommentIcon from "@mui/icons-material/Comment";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { Link } from "react-router-dom";
 import ProfilePicture from "../assets/Avatar.png";
 const NavBar = ({ selected }) => {
   return (
@@ -45,46 +44,18 @@ const NavBar = ({ selected }) => {
         />
       </Box>
 
-      <Box display={"flex"} gap={"25px"}>
-        <Link
-          to={"/Comments"}
-          style={{
-            textDecoration: "none",
-            color: "gray",
-            margin: "0",
-            padding: "0",
-          }}
-        >
-          <CommentIcon />
-        </Link>
-        <Link
-          to={"/Notification"}
-          style={{
-            textDecoration: "none",
-            color: "gray",
-            margin: "0",
-            padding: "0",
-          }}
-        >
-          <Badge color="secondary" variant="dot">
-            <NotificationsActiveIcon />
-          </Badge>
-        </Link>
-        <Link
-          to={"/Settings"}
-          style={{
-            textDecoration: "none",
-            color: "gray",
-            margin: "0",
-            padding: "0",
-          }}
-        >
-          <SettingsIcon />
-        </Link>
+      <Box display={"flex"} gap={"25px"} alignItems={"center"} color={"gray"}>
+        <CommentIcon sx={{ cursor: "pointer" }} />
+
+        <Badge color="secondary" variant="dot">
+          <NotificationsActiveIcon sx={{ cursor: "pointer" }} />
+        </Badge>
+
+        <SettingsIcon sx={{ cursor: "pointer" }} />
 
         {/* MenuItem */}
 
-        <Box borderRadius={"100px"}>
+        <Box borderRadius={"50%"} sx={{ cursor: "pointer" }}>
           <img
             src={ProfilePicture}
             style={{ borderRadius: "50%" }}

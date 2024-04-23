@@ -5,6 +5,9 @@ import { useState } from "react";
 import NavBar from "./components/NavBar";
 import { CoursesProvider } from "./context/CoursesContext";
 import Courses from "./screens/Courses";
+import CourseDetails from "./screens/CourseDetails";
+import Favorites from "./screens/Favorites";
+import Profile from "./screens/Profile";
 
 function App() {
   const [selected, setSelected] = useState("Inicio");
@@ -23,6 +26,18 @@ function App() {
               <Route
                 path="/courses"
                 element={<Courses setSelected={setSelected} />}
+              ></Route>
+              <Route
+                path="/course/:id"
+                element={<CourseDetails setSelected={setSelected} />}
+              ></Route>
+              <Route
+                path="/favorites"
+                element={<Favorites setSelected={setSelected} />}
+              ></Route>
+              <Route
+                path="/profile"
+                element={<Profile setSelected={setSelected} />}
               ></Route>
             </Routes>
           </CoursesProvider>
