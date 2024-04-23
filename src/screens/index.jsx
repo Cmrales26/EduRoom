@@ -6,6 +6,7 @@ import CourseCards from "../components/CourseCards";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import TopicsCards from "../components/TopicsCards";
 
 const Home = ({ setSelected }) => {
   useEffect(() => {
@@ -115,28 +116,7 @@ const Home = ({ setSelected }) => {
               gap={1}
             ></Box>
           </Box>
-          <Box display={"flex"} justifyContent={"space-between"} gap={2}>
-            {categories.slice(0, 4).map((category, idx) => (
-              <Box
-                display={"flex"}
-                alignItems={"center"}
-                gap={2}
-                key={idx}
-                style={{
-                  backgroundColor: "#fff",
-                  padding: "1.5rem 3rem",
-                  borderRadius: "20px",
-                  marginTop: "20px",
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                <img src={category.image} width={50}></img>
-
-                {category.cat}
-              </Box>
-            ))}
-          </Box>
+          <TopicsCards data={categories} />
         </Box>
       </Box>
     </Box>

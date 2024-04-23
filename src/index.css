@@ -8,6 +8,12 @@
 body {
   overflow: hidden;
 }
+.topbar {
+  display: none;
+}
+.searchMobile {
+  display: none !important;
+}
 
 .app {
   display: flex;
@@ -34,8 +40,211 @@ span {
   gap: 20px;
 }
 
-@media screen and (min-width: 930px) {
+/* Responsive */
+
+@media only screen and (min-width: 1024px) {
   .Courses {
-    grid-template-columns: repeat(3, minmax(310px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
+}
+
+@media screen and (max-width: 1024px) {
+  * {
+    h6 {
+      font-size: 15px !important;
+    }
+    h4 {
+      font-size: 20px !important;
+    }
+    p,
+    a {
+      font-size: 11px !important;
+    }
+  }
+  .Sidebar {
+    img {
+      width: 100px !important;
+    }
+  }
+  .Courses {
+    span {
+      font-size: 13px !important;
+    }
+    .css-1j2x37m {
+      height: 100px;
+    }
+  }
+  .Topic {
+    padding: 0.5rem !important;
+    span {
+      font-size: 13px !important;
+    }
+  }
+  .search {
+    width: 40% !important;
+  }
+  .Sidebar {
+    figure {
+      padding: 1rem !important;
+    }
+    padding: 0 !important;
+    span {
+      font-size: 13px !important;
+    }
+    .NavigationBar {
+      padding: 0.5rem !important;
+    }
+    .css-izdxgh {
+      padding: 0.5rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+  body {
+    overflow: auto;
+  }
+  .NavigationBars {
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+
+    .css-itkwlx {
+      gap: 10px;
+    }
+    #NavLogo {
+      padding: 10px !important;
+    }
+  }
+  .insideContent {
+    height: 100%;
+    margin-top: 9rem !important;
+  }
+  .topbar {
+    display: block;
+  }
+  .Sidebar {
+    display: none !important;
+  }
+  #NavLogo {
+    display: block !important;
+    img {
+      width: 80px !important;
+    }
+  }
+  .content {
+    width: 100%;
+  }
+
+  .Topic {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    span {
+      font-size: 13px !important;
+    }
+  }
+  .search {
+    width: 30% !important;
+  }
+  .NavigationBar {
+    .css-i4bv87-MuiSvgIcon-root {
+      margin-top: 5px;
+    }
+    padding: 0rem 1rem !important;
+    span {
+      display: none;
+      padding: 1rem !important;
+    }
+  }
+
+  /* Details */
+  #DetailsCourse {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Courses {
+    grid-template-columns: repeat(1, minmax(2px, 1fr));
+  }
+  * {
+    h5 {
+      font-size: 15px !important;
+    }
+    p {
+      font-size: 11px !important;
+    }
+  }
+  .css-1frc0ff {
+    overflow: auto;
+    img {
+      width: 40%;
+    }
+  }
+  .css-1fab1ua {
+    overflow: auto;
+    .Topic {
+      padding: 0.5rem 1rem !important;
+    }
+    span {
+      font-size: 10px !important;
+    }
+  }
+
+  .css-1033rfx {
+    padding: 20px !important;
+  }
+
+  .css-1mb7ed4 {
+    padding: 20px !important;
+  }
+  .css-10wwyjm {
+    .css-124zb1q {
+      display: none;
+    }
+    .css-15edxu6-MuiTypography-root {
+      width: 100%;
+      padding: 2rem;
+      span {
+        width: 20px !important;
+      }
+    }
+  }
+
+  .NavigationBars {
+    .css-14bbsej {
+      display: none !important;
+    }
+    .searchMobile {
+      display: block !important;
+    }
+  }
+
+  #DetailsCourse {
+    svg {
+      font-size: 20px !important;
+    }
+    span {
+      font-size: 12px !important;
+    }
+    img {
+      height: 200px;
+    }
+    .Favorite {
+      left: 85% !important;
+    }
+    .classes {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
 }

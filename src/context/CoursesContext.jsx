@@ -40,22 +40,22 @@ export const CoursesProvider = ({ children }) => {
   const popular = [
     {
       id: 1,
-      tema: "Desarrollo web",
+      cat: "Desarrollo web",
       image: "https://cdn-icons-png.flaticon.com/512/6188/6188044.png",
     },
     {
       id: 2,
-      tema: "Inteligencia Artificial",
+      cat: "Inteligencia Artificial",
       image: "https://cdn-icons-png.flaticon.com/512/6612/6612153.png",
     },
     {
       id: 3,
-      tema: "Diseño Gráfico",
+      cat: "Diseño Gráfico",
       image: "https://cdn-icons-png.freepik.com/512/8361/8361102.png",
     },
     {
       id: 4,
-      tema: "Habilidades blandas ",
+      cat: "Habilidades blandas ",
       image: "https://cdn-icons-png.flaticon.com/512/6171/6171939.png",
     },
   ];

@@ -4,11 +4,11 @@ import logo from "../assets/EduRoom.svg";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import PersonIcon from "@mui/icons-material/Person";
 import HomeIcon from "@mui/icons-material/Home";
-import PropTypes from "prop-types";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import PropTypes from "prop-types";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-const Item = ({ title, to, icon, selected }) => {
+export const Item = ({ title, to, icon, selected }) => {
   return (
     <Link
       to={to}
@@ -18,6 +18,7 @@ const Item = ({ title, to, icon, selected }) => {
       }}
     >
       <Box
+        className="NavigationBar"
         display={"flex"}
         alignItems={"center"}
         gap={"10px"}

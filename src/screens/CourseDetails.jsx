@@ -60,7 +60,7 @@ const CourseDetails = ({ setSelected }) => {
   };
 
   return (
-    <Box>
+    <Box id="DetailsCourse">
       <Box>
         <Box position={"relative"} style={{ marginBottom: "1rem" }}>
           <img
@@ -111,6 +111,7 @@ const CourseDetails = ({ setSelected }) => {
           </Box>
 
           <Box
+            className="Favorite"
             position="absolute"
             top="10%"
             left="93%"
@@ -149,7 +150,7 @@ const CourseDetails = ({ setSelected }) => {
       </Box>
 
       {/* Tabla de contenido */}
-      <Box p={3}>
+      <Box p={3} className="classes">
         <Typography variant="h5">Contenido del curso</Typography>
         <Box p={5}>
           <Stepper orientation="vertical">

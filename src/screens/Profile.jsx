@@ -17,7 +17,7 @@ const Profile = ({ setSelected }) => {
       width={"100%"}
       height={"90vh"}
     >
-      <Box>
+      <Box display={"flex"} flexDirection={"column"}>
         <img
           src={ProfilePicture}
           alt={"Avatar"}
@@ -39,7 +39,7 @@ const Profile = ({ setSelected }) => {
             target="_blank"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <Box display={"flex"} gap={1}>
+            <Box display={"flex"} gap={1} alignItems={"end"}>
               <GitHubIcon />
               <Typography variant="body2">@Cmrales26</Typography>
             </Box>

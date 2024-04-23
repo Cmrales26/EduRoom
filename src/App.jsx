@@ -8,6 +8,7 @@ import Courses from "./screens/Courses";
 import CourseDetails from "./screens/CourseDetails";
 import Favorites from "./screens/Favorites";
 import Profile from "./screens/Profile";
+import TopBar from "./components/TopBar";
 
 function App() {
   const [selected, setSelected] = useState("Inicio");
@@ -15,7 +16,12 @@ function App() {
     <div className="app">
       <Sidebar selected={selected} setSelected={setSelected} />
       <main className="content">
-        <NavBar selected={selected} />
+        <div className="NavigationBars">
+          <NavBar selected={selected} />
+          <div className="topbar">
+            <TopBar selected={selected} />
+          </div>
+        </div>
         <div className="insideContent">
           <CoursesProvider>
             <Routes>

@@ -3,6 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useCourses } from "../context/CoursesContext";
 import CourseCards from "../components/CourseCards";
+import TopicsCards from "../components/TopicsCards";
 
 const Courses = ({ setSelected }) => {
   const [numCourse, setNumCourse] = useState(6);
@@ -32,30 +33,7 @@ const Courses = ({ setSelected }) => {
         <Typography variant="h5" style={{ fontWeight: "bold" }}>
           Populares de esta semana
         </Typography>
-        <Box display={"flex"} justifyContent={"space-between"} gap={2}>
-          {popular.map((popular, idx) => (
-            <Box
-              mt={5}
-              key={idx}
-              display={"flex"}
-              sx={{ backgroundColor: "#fff" }}
-              alignItems={"center"}
-              gap={2}
-              padding={1.5}
-              borderRadius={"20px"}
-              width={"330px"}
-            >
-              <img
-                src={popular.image}
-                alt={popular.tema}
-                style={{ width: "50px", height: "50px" }}
-              />
-              <Box>
-                <Typography variant="p">{popular.tema}</Typography>
-              </Box>
-            </Box>
-          ))}
-        </Box>
+        <TopicsCards data={popular} />
       </Box>
       <Box p={5}>
         <Typography variant="h5" style={{ fontWeight: "bold" }}>

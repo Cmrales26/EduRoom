@@ -55,7 +55,12 @@ const CourseCards = ({ id, img, title, price, author, content, grade }) => {
           to={`/course/${id}`}
           style={{ textDecoration: "none", color: "#8e96f4" }}
         >
-          <Box display={"flex"} justifyContent={"center"} gap={1}>
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            gap={1}
+          >
             Ver detalles
             <ChevronRightIcon />
           </Box>
